@@ -20,7 +20,6 @@ public class QueueConsumer {
         logger.log(Level.INFO, "Message: " + fileBody);
 
         final int delay = RandomUtils.nextInt(7, 10);
-        logger.log(Level.INFO, "Sleeping for sec: " + delay);
 
         executionDelay.forSec(delay);
     }

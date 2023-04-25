@@ -26,7 +26,6 @@ public class MessageConsumer {
         logger.log(Level.INFO, "Payload: " + payload);
 
         final int delay = RandomUtils.nextInt(5, 7);
-        logger.log(Level.INFO, "Sleeping for sec: " + delay);
 
         executionDelay.forSec(delay);
     }
