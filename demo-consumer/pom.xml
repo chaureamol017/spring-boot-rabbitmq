@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>com.mycomp.demo</groupId>
-    <artifactId>spring-boot-rest-demo</artifactId>
+    <groupId>com.mycomp.mq.demo</groupId>
+    <artifactId>demo-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
