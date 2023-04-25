@@ -21,7 +21,7 @@
     <properties>
         <!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
         <java.version>1.8</java.version>
-        <start-class>com.mycomp.demo.DemoAppApiApplication</start-class>
+        <start-class>com.mycomp.mq.demo.DemoProducerApplication</start-class>
     </properties>
 
     <dependencies>
@@ -80,7 +80,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.mycomp.demo.DemoAppApiApplication</mainClass>
+                    <mainClass>com.mycomp.mq.demo.DemoProducerApplication</mainClass>
                     <layout>JAR</layout>
                 </configuration>
                 <executions>
