@@ -1,7 +1,5 @@
 package com.mycomp.mq.demo.queue;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mycomp.mq.demo.helper.ExecutionDelay;
 import com.mycomp.mq.demo.model.MessagePayload;
 import org.apache.commons.lang3.RandomUtils;
@@ -19,14 +17,10 @@ public class MessageConsumer {
     @Autowired private ExecutionDelay executionDelay;
 
     @RabbitListener(queues = {"SimpleMessageQueue"})
-    public void receive(@Payload String queueData) throws JsonProcessingException {
-        final ObjectMapper mapper = new ObjectMapper();
-        final MessagePayload payload = mapper.readValue(queueData, MessagePayload.class);
-
+    public void receive(@Payload MessagePayload payload) {
         logger.log(Level.INFO, "Payload: " + payload);
 
         final int delay = RandomUtils.nextInt(5, 7);
-
         executionDelay.forSec(delay);
     }
 }
