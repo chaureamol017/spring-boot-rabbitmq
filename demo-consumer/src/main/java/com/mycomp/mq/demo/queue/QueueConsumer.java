@@ -17,7 +17,7 @@ public class QueueConsumer {
 
     @RabbitListener(queues = {"MyQueue"})
     public void receive(@Payload String fileBody) {
-        logger.log(Level.INFO, "Message: " + fileBody);
+        logger.log(Level.INFO, "MyQueue: Payload: " + fileBody);
 
         final int delay = RandomUtils.nextInt(7, 10);
         executionDelay.forSec(delay);

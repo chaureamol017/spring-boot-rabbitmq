@@ -18,7 +18,7 @@ public class MessageConsumer {
 
     @RabbitListener(queues = {"SimpleMessageQueue"})
     public void receive(@Payload MessagePayload payload) {
-        logger.log(Level.INFO, "Payload: " + payload);
+        logger.log(Level.INFO, "SimpleMessageQueue: Payload: " + payload);
 
         final int delay = RandomUtils.nextInt(5, 7);
         executionDelay.forSec(delay);
